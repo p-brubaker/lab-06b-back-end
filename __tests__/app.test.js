@@ -22,7 +22,7 @@ describe('app routes', () => {
       //   });
       
       // token = signInData.body.token; // eslint-disable-line
-    }, 10000);
+    }, 15000);
   
     afterAll(done => {
       return client.end(done);
@@ -35,37 +35,37 @@ describe('app routes', () => {
           id: 1,
           name: 'Ada Lovelace',
           living: false,
-          specialty: 'logic'
+          specialties_id: 1
         },
         {
           id: 2,
           name: 'Alan Turing',
           living: false,
-          specialty: 'cryptography'
+          specialties_id: 2
         },
         {
           id: 3,
           name: 'Donald Knuth',
           living: true,
-          specialty: 'open source'
+          specialties_id: 3
         },
         {
           id: 4,
           name: 'Yukihiro Matsumoto',
           living: true,
-          specialty: 'open source'
+          specialties_id: 3
         },
         {
           id: 5, 
           name: 'Sophie Wilson',
           living: true,
-          specialty: 'hardware design'
+          specialties_id: 4
         },
         {
           id: 6,
           name: 'Haskell Curry',
           living: false,
-          specialty: 'logic'
+          specialties_id: 1
         }
       ];
 
@@ -98,7 +98,7 @@ describe('app routes', () => {
       const newScientist = {
         name: 'booger',
         living: true,
-        specialty: 'everything'
+        specialties_id: 1
       };
 
       const data = await fakeRequest(app)
