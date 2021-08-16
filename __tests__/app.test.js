@@ -35,37 +35,37 @@ describe('app routes', () => {
           id: 1,
           name: 'Ada Lovelace',
           living: false,
-          specialties_id: 1
+          specialty: 'logic'
         },
         {
           id: 2,
           name: 'Alan Turing',
           living: false,
-          specialties_id: 2
+          specialty: 'cryptography'
         },
         {
           id: 3,
           name: 'Donald Knuth',
           living: true,
-          specialties_id: 3
+          specialty: 'open source'
         },
         {
           id: 4,
           name: 'Yukihiro Matsumoto',
           living: true,
-          specialties_id: 3
+          specialty: 'open source'
         },
         {
           id: 5, 
           name: 'Sophie Wilson',
           living: true,
-          specialties_id: 4
+          specialty: 'hardware design'
         },
         {
           id: 6,
           name: 'Haskell Curry',
           living: false,
-          specialties_id: 1
+          specialty: 'logic'
         }
       ];
 
