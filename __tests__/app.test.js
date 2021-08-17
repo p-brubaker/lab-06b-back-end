@@ -153,14 +153,5 @@ describe('app routes', () => {
       expect(data.body.name).toEqual(newScientist.name);
       expect(data.body.id).toBeGreaterThan(0);
     });
-
-
-    test('update', () => {
-
-    });
-
-    test('destroooy', () => {
-
-    });
   });
 });
