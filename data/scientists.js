@@ -2,32 +2,32 @@ const data = [
   {
     name: 'Ada Lovelace',
     living: false,
-    specialty: 'logic'
+    specialties_id: 1
   },
   {
     name: 'Alan Turing',
     living: false,
-    specialty: 'cryptography'
+    specialties_id: 2
   },
   {
     name: 'Donald Knuth',
     living: true,
-    specialty: 'open source'
+    specialties_id: 3
   },
   {
     name: 'Yukihiro Matsumoto',
     living: true,
-    specialty: 'open source'
+    specialties_id: 3
   },
   { 
     name: 'Sophie Wilson',
     living: true,
-    specialty: 'hardware design'
+    specialties_id: 4
   },
   {
     name: 'Haskell Curry',
     living: false,
-    specialty: 'logic'
+    specialties_id: 1
   }
 ];
 

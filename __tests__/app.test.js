@@ -22,10 +22,38 @@ describe('app routes', () => {
       //   });
       
       // token = signInData.body.token; // eslint-disable-line
-    }, 10000);
+    }, 15000);
   
     afterAll(done => {
       return client.end(done);
+    });
+
+    test('get /specialties returns specialties', async() => {
+      const expectation = [
+        {
+          id: 1,
+          name: 'logic'
+        },
+        {
+          id: 2,
+          name: 'cryptography'
+        },
+        {
+          id: 3,
+          name: 'open source'
+        },
+        {
+          id: 4,
+          name: 'hardware design'
+        }
+      ];
+
+      const data = await fakeRequest(app)
+        .get('/specialties')
+        .expect(200)
+        .expect('Content-Type', /json/);
+
+      expect(data.body).toEqual(expectation);
     });
 
     test('/scientists returns scientists', async() => {
@@ -98,7 +126,7 @@ describe('app routes', () => {
       const newScientist = {
         name: 'booger',
         living: true,
-        specialty: 'everything'
+        specialties_id: 1
       };
 
       const data = await fakeRequest(app)
@@ -114,25 +142,16 @@ describe('app routes', () => {
       const newScientist = {
         name: 'ada lovelace',
         living: false,
-        specialty: 'logic'
+        specialties_id: 1
       };
 
       const data = await fakeRequest(app)
         .put('/scientists/1').send(newScientist)
-        .expect(200)
+        // .expect(200)
         .expect('Content-Type', /json/);
 
       expect(data.body.name).toEqual(newScientist.name);
       expect(data.body.id).toBeGreaterThan(0);
-    });
-
-
-    test('update', () => {
-
-    });
-
-    test('destroooy', () => {
-
     });
   });
 });
