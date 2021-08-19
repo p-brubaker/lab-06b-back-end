@@ -14,10 +14,10 @@ async function run() {
     await Promise.all(
       scientists.map(scientist => {
         return client.query(
-          `INSERT INTO scientists (name, specialties_id, living)
-                    VALUES ($1, $2, $3);
+          `INSERT INTO scientists (name, specialties_id, living, img_url)
+                    VALUES ($1, $2, $3, $4);
                 `,
-          [scientist.name, scientist.specialties_id, scientist.living]);
+          [scientist.name, scientist.specialties_id, scientist.living, scientist.img_url]);
       })
     );
     await Promise.all(

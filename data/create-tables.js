@@ -23,7 +23,8 @@ async function run() {
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
                     specialties_id INTEGER NOT NULL,
-                    living BOOL NOT NULL
+                    living BOOL NOT NULL,
+                    img_url VARCHAR(512)
             );
     `);
 
