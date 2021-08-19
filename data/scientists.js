@@ -40,6 +40,12 @@ const data = [
     living: true,
     specialties_id: 2,
     img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Bruce_McCandless_II_during_EVA_in_1984.jpg/1280px-Bruce_McCandless_II_during_EVA_in_1984.jpg'
+  },
+  {
+    name: 'Dr Evil',
+    living: true,
+    specialties_id: 4,
+    img_url: 'https://upload.wikimedia.org/wikipedia/en/1/16/Drevil_million_dollars.jpg'
   }
 ];
 
